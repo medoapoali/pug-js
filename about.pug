@@ -1,0 +1,17 @@
+extends indx.pug
+
+block pageTitle
+  title Abutme
+
+//- بعد العنصر
+append pageInfo 
+  .appended about page content
+
+//- قبل العنصر
+block prepend pageInfo 
+  .prepend about page content
+
+block pageContent
+  .about-me 
+    .container 
+      p this content about me page

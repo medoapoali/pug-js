@@ -1,0 +1,343 @@
+mayMix.pug
+mixin maySkills 
+  ul(class='medoapoali') 
+    li php
+    li larafel
+    li css
+    li html
+    li the's #{theName}
+_______________________________________________
+mayvar.pug
+- 
+  let className = 'the-font'
+  let theName = 'medo'
+  let themtag = 'Hello <b>mester</b> worled'
+
+______________________________________________
+script.pug
+script(src='js/main.js')
+script(src='js/jquery.js')
+script(src='js/bootstrap.js')
+script(src='js/medo.js')
+__________________________________________
+
+
+_______________________________________________
+doctype html
+html  
+  head 
+    title my pug Resume 
+  body    .medo
+    div(class='container',id='main' ) 
+      h2(class='maintetle') My skills 
+      //-start ny skills
+      //-
+        testing comenents
+        second line coment
+      ul(class='mainLest') 
+        li#main-li php
+        li mysql 
+        li sass
+        li pugjs
+        //-end my skills
+      p Lorem ipsum <b>test</b>
+      p.main-prgraph
+      .medo 
+      #medo 
+      p.medo 
+      p#medo 
+      div.medo
+        |
+        b medo 
+        |
+        |medo
+        |medoapoali
+    |
+    |medo gadd
+    |
+    |
+    .
+      medo
+_______________________________________________________
+include includs/mayvar.pug
+html(lang='en')
+  head 
+  meta(charset='utf-8')
+  meta(name='description' content='Learn PugJs')
+  title My Resume 
+  include includs/style
+  body 
+  //- bferCode
+  div the <strong> bferCode </strong> greter than
+  div='this <strong>tag</strong>will not appear'
+  div!='this <strong>tag</strong>will not appear'
+  li(class='testing ' + className) php
+  div(class='main-container',id='main')
+    h2(class='main=tetle') my skills
+
+  div(class='parent') parent div
+  div(class='child ' + className) child div
+  include includs/script 
+________________________________________________________
+include includs/mayvar.pug
+html(lang='en')
+  head 
+  meta(charset='utf-8')
+  meta(name='description' content='Learn PugJs')
+  title My Resume 
+  include includs/style
+  body 
+  //- bferCode
+  div the <strong> bferCode </strong> greter than
+  div='this <strong>tag</strong>will not appear'
+  div!='this <strong>tag</strong>will not appear'
+  li(class='testing ' + className) php
+  div(class='main-container',id='main')
+    h2(class='main=tetle') my skills
+  - for (let x = 0; x<=10;x++)
+    p medo
+  - for (let x = 0; x<=10;x++)
+    p #{x}
+  - let z = 0
+  //- this for loop
+  ul 
+  //- this while loop
+    while z <= 20
+      li=z++
+  div(class='parent') parent div
+  div(class='child ' + className) child div
+  include includs/script 
+_____________________________________________
+foor loop and while loop
+++++++++++++++++
+include includs/mayvar.pug
+html(lang='en')
+  head 
+  meta(charset='utf-8')
+  meta(name='description' content='Learn PugJs')
+  title My Resume 
+  include includs/style
+  body 
+  //- bferCode
+  div the <strong> bferCode </strong> greter than
+  div='this <strong>tag</strong>will not appear'
+  div!='this <strong>tag</strong>will not appear'
+  li(class='testing ' + className) php
+  div(class='main-container',id='main')
+    h2(class='main=tetle') my skills
+  - for(let x = 0;x<=10;x++)
+    li medo 
+  - for(let m=0;m<=15;m++)
+    p #{m}
+  - let m = 0
+  ul 
+    while m < 30
+      li=m++
+      
+  div(class='parent') parent div
+  div(class='child ' + className) child div
+  include includs/script 
+________________________________________________________
+    //- this is each loop
+  each val in[1,2,3,4,'five',6,7,8,9]
+    div=val
+  //- value = index
+  //_______________________________index
+  each val, index  in[1,2,3,4,'five',6,7,8,9]
+    div=index
+  //_______________________________index : value
+  each val, index  in[1,2,3,4,'five',6,7,8,9]
+    div=index + ' : ' + val
+  //________________________________each the farepols
+  - var mayAray = ['html','css','php','mysql','javascript']
+  each val,index in mayAray 
+    div=index + 1 + ' : ' + val
+  //_________ else
+  else 
+    p ther is no value
+____________________________________________________
+  ul(class='sdill-list')
+    il php #{theName.toUpperCase()}//MEDO
+    il mysql #{themtag}//mysql Hello &lt;b&gt;mester&lt;/b&gt; worled
+    il mysql !{themtag}//mysql Hello <b>mester</b> worled
+    il sass #{'}'}!//sass }!
+    il pugjs
+_______________________________________________________
+    il pugjs \#{osama}
+    il pugjs #{'#{osama}'}
+    //- bold inter coletion
+    p.inter medoapoali #[b bold] text after element
+_______________________________________________________
+include includs/mayMix.pug
+include includs/mayvar.pug
+html(lang='en')
+  head 
+  meta(charset='utf-8')
+  meta(name='description' content='Learn PugJs')
+  title My Resume 
+  include includs/style
+  body 
+  //- bferCode
+  div the <strong> bferCode </strong> greter than
+  div='this <strong>tag</strong>will not appear'
+  div!='this <strong>tag</strong>will not appear'
+  li(class='testing ' + className) php
+  div(class='main-container',id='main')
+    h2(class='main=tetle') my skills
+  - for(let x = 0;x<=10;x++)
+    li medo 
+  - for(let m=0;m<=15;m++)
+    p #{m}
+  - let m = 0
+  ul 
+    while m < 30
+      li=m++
+  each val in [1,2,3,4,5]
+    div=val 
+  each val,index in['medo','syed','mose','kt','his']
+    div=index + 1 + ' : ' + val
+  each val in []
+    div=val
+  else
+    p medoapoali 
+  ul(class='sdill-list')
+    il php #{theName.toUpperCase()}
+    il mysql #{themtag}
+    il mysql !{themtag}
+    il sass #{'}'}!
+    il pugjs \#{osama}
+    il pugjs #{'#{osama}'}
+  +maySkills 
+    //- bold inter coletion
+    p.inter medoapoali #[b bold] text after element
+
+  div(class='parent') parent div
+  div(class='child ' + className) child div
+
+  include includs/script 
+___________________________________________________
++maySkills 
+    //- bold inter coletion
+    p.inter medoapoali #[b bold] text after element
+___________________________________________________
+mayMix.pug
+mixin feture(featName)
+  div(calss='feats',style='color: red;')= featName
+++++++++++++++++++++++++++++
+  div 
+    +feture('Cheap prece')
+    +feture('fast support')
+=
+ <div> 
+    <div calss="feats" style="color: red;">Cheap prece</div>
+    <div calss="feats" style="color: red;">fast support</div>
+  </div>
+_________________________________________________________
+extends indx.pug
+
+block pageTitle
+  title Abutme
+
+//- بعد العنصر
+append pageInfo 
+  .appended about page content
+
+//- قبل العنصر
+block prepend pageInfo 
+  .prepend about page content
+
+block pageContent
+  .about-me 
+    .container 
+      p this content about me page
+_____++++++++++++++++
+  block pageTitle
+    title My Resume 
+  include includs/style
+  body 
+    block pageInfo 
+      main main page content
+    block pageContent
+____________________________________________
+    - let friends = 3
+    case friends 
+      when 0
+        -break
+      when 1
+        pyou nave no friends 
+      default 
+        p you have #{friends} friends
+      //- sowetch caess
+    - let friends = 3
+    case friends 
+      when 0: p you not have friends
+      when 1: p you have one friends 
+      default: p you have #{friends} friends
+____________________________________________________
+include includs/mayMix.pug
+include includs/mayvar.pug
+html(lang='en')
+  head 
+  meta(charset='utf-8')
+  meta(name='description' content='Learn PugJs')
+  block pageTitle
+    title My Resume 
+  include includs/style
+  body 
+    block pageInfo 
+      main main page content
+    block pageContent
+    div the <strong> bferCode </strong> greter than
+    div='this <strong>tag</strong>will not appear'
+    div!='this <strong>tag</strong>will not appear'
+    li(class='testing ' + className) php
+    div(class='main-container',id='main')
+      h2(class='main=tetle') my skills
+    - for(let x = 0;x<=10;x++)
+      li medo 
+    - for(let m=0;m<=15;m++)
+      p #{m}
+    - let m = 0
+    ul 
+      while m < 30
+        li=m++
+    each val in [1,2,3,4,5]
+      div=val 
+    each val,index in['medo','syed','mose','kt','his']
+      div=index + 1 + ' : ' + val
+    each val in []
+      div=val
+    else
+      p medoapoali 
+    ul(class='sdill-list')
+      il php #{theName.toUpperCase()}
+      il mysql #{themtag}
+      il mysql !{themtag}
+      il sass #{'}'}!
+      il pugjs \#{osama}
+      il pugjs #{'#{osama}'}
+    +maySkills 
+      //- bold inter coletion
+      p.inter medoapoali #[b bold] text after element
+
+    div(class='parent') parent div
+    div(class='child ' + className) child div
+    div 
+      +feture('Cheap prece')
+      +feture('fast support')
+    
+    - let friends = 3
+    case friends 
+      when 0
+        -break
+      when 1
+        pyou nave no friends 
+      default 
+        p you have #{friends} friends
+      //- sowetch caess
+    - let gearFriends = 3
+    case gearFriends 
+      when 0: p you not have gearFriends
+      when 1: p you have one gearFriends 
+      default: p you have #{gearFriends} gearFriends
+    include includs/script 
